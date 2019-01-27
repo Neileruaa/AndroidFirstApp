@@ -10,8 +10,8 @@
         android:id="@+id/image_view_character_picture"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginLeft="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="300dp"
         android:contentDescription="@string/avatar"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,20 +22,20 @@
         android:id="@+id/text_view_character_first_name"
         android:layout_width="78dp"
         android:layout_height="17dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginLeft="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="350dp"
         android:text="@string/firstname"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_view_character_picture"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_view_character_familiy_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="348dp"
         android:text="@string/familyname"
         app:layout_constraintStart_toEndOf="@+id/text_view_character_first_name"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,11 +44,11 @@
         android:id="@+id/text_view_character_latitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginLeft="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/latitude"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_view_character_picture"
         app:layout_constraintTop_toBottomOf="@+id/text_view_character_first_name" />
 
     <TextView

@@ -1,5 +1,6 @@
 package com.example.adrey.firstproject;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -20,11 +21,13 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
          HomeFragment.OnFragmentInteractionListener,
-         CreditsFragment.OnFragmentInteractionListener{
+         CreditsFragment.OnFragmentInteractionListener,
+        MyDataFragment.OnFragmentInteractionListener{
 
     private FragmentManager fm = null;
     private Fragment fragment = null;
     private Fragment creditFragment = null;
+    private Fragment dataFragment= null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity
         fm = getSupportFragmentManager();
         fragment = new HomeFragment();
         creditFragment = new CreditsFragment();
+        dataFragment = new MyDataFragment();
         fm.beginTransaction().replace(R.id.content_main, fragment).commit();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -85,6 +89,8 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
             return true;
         }
 
@@ -102,7 +108,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_camera) {
 
         } else if (id == R.id.nav_data) {
-
+            fm.beginTransaction().replace(R.id.content_main, dataFragment ).commit();
         } else if (id == R.id.nav_map) {
 
         } else if (id == R.id.nav_credits) {
